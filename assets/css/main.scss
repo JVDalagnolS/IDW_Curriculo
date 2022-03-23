@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    margin: 0 !important;
+}
+
+/* Background things ahead */
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: linear-gradient(to top, #348F50 20%, #56B4D3 80%);
+}
+.bgTop {
+    z-index: -10;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: -15;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: -20;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+
+.background {
+    
+}
+
+/* End of background things */
+
+.content_body {
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 240px;
+
+    z-index: 100;
+
+    position: static;
+    width: auto;
+    height: auto;
+
+
+
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 1;
+    margin: 10px 0px;
+}
+
+.content_view {
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px 50px;
+
+
+    position: static;
+    width: 50vw;
+    height: fit-content;
+
+    background: #FFFFFF;
+    box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.25);
+    
+    border-radius: 6px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: center;
+    flex-grow: 1;
+
+}
+
+/* Here rests the commom classes*/
+
+.divider{
+    position: static;
+    width: auto;
+    height: 2px;
+
+    
+    background: radial-gradient(41.09% 525% at 50% 50%, #C4C4C4 0%, rgba(196, 196, 196, 0) 100%);
+    border-radius: 4px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 60px 0px;
+}
+
+.big_title{
+    position: static;
+    width: fit-content;
+    height: fit-content;
+    
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 45px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #000000;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 30px 0px;
+}
+
+.text_box{
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: fit-content;
+    height: fit-content;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 30px 0px;
+}
+
+.title{
+    position: static;
+    width: fit-content;
+    height: fit-content;
+
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #000000;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.text{
+    position: static;
+    width: fit-content;
+    height: fit-content;
+
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 33px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #000000;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.small_text{
+    position: static;
+    width: fit-content;
+    height: fit-content;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #AAAAAA;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+/* Here rests some rectangles */
+
+.rectangle{
+    position: static;
+    width: 22px;
+    height: 34px;
+
+
+    background: #D3D3D3;
+    border-radius: 5px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0px 3px;
+}
+
+.rectangle_active{
+    /* Rectangle 1 */
+
+
+    position: static;
+    width: 22px;
+    height: 34px;
+
+    background: #00EE18;
+    border-radius: 5px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0px 3px;
+}
+
+/* Here rests the specific classes */
+
+#name{
+    position: static;
+    width: fit-content;
+    height: fit-content;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #000000;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 6px 0px;
+}
+
+#presentation{
+    position: static;
+    width: fit-content;
+    height: fit-content;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* identical to box height */
+    
+    
+    color: #000000;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 6px 0px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    position: static;
+    width: auto;
+    height: auto;
+
+    
+    /*background: #FFFFFF;*/
+    border-radius: 6px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin:0px;
+}
+
+.education{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 20px;
+
+    position: static;
+    width: fit-content;
+    height: fit-content;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin:0px;
+}
+
+.exp{
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 20px;
+
+    position: static;
+    width: fit-content;
+    height: fit-content;
+
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+    margin:0px;
+}
+
+.acquirements{
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 20px;
+
+    position: static;
+    width: fit-content;
+    height: fit-content;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 6;
+    flex-grow: 0;
+    margin:0px;
+}
+
+#acquirements_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 500px;
+    height: fit-content;
+
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 30px 0px;
+}
+
+.solo_acquirement{
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: auto;
+    height: fit-content;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    align-self: stretch;
+    order: 0;
+    flex-grow: 0;
+    margin: 8px 0px;
+}
+
+#ac_lvl {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px;
+
+    position: static;
+    width: fit-content;
+    height: fit-content;
+
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0px;
+}
