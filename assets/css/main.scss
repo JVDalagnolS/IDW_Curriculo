@@ -77,6 +77,10 @@
     animation: move_wave 15s linear infinite;
 }
 
+.background {
+    height: 100% !important;
+    z-index: 0;
+}
 
 /* End of background things */
 
@@ -166,6 +170,7 @@
     display: flex;
     align-items: center;
     text-align: center;
+    text-decoration: underline;
     
     color: #000000;
     
@@ -413,10 +418,11 @@ margin: 10px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     
     position: static;
     width: auto;
-    height: auto;
+    height: 70vh;
 
     
     /*background: #FFFFFF;*/
